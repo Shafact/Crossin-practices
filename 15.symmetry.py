@@ -7,6 +7,8 @@
 
 例如：26 的平方是 676，为回文数。所以 26 满足我们的条件
 """
+
+"""
 def reverse_str(strg):
     rev_str = []
     for i in strg:
@@ -24,3 +26,15 @@ for i in range(1, 201):
     else:
         pass
 print("rightnumber: ",rightnumber)
+"""
+
+for n in range(1, 200):
+    #sq是n的平方
+    sq = n * n
+    #把平方值转为字符串
+    str_sq = str(sq)
+    for i in range(len(str_sq)):
+        if str_sq[i] != str_sq[-(i+1)]:
+            break
+    else:
+        print(n)
